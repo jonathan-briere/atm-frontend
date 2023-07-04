@@ -1,7 +1,8 @@
-import { Typography } from "@mui/material";
 import * as React from "react";
-import { fetchGeoLocations } from "../action/geoAction";
+
 import { Layout } from "../components/Layout";
+import { Listing } from "../components/Listing";
+import { fetchGeoLocations } from "../action/geoAction";
 
 const IndexPage = () => {
   const [locations, setLocations] = React.useState();
@@ -12,14 +13,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <Typography
-        sx={{ textAlign: "center" }}
-        variant="h2"
-        component="div"
-        gutterBottom
-      >
-        ATM Frontend
-      </Typography>
+      <Listing locations={locations} />
     </Layout>
   );
 };
