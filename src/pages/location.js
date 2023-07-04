@@ -1,10 +1,14 @@
 import React from "react";
+import { Box } from "@mui/material";
+
 import { Layout } from "../components/Layout";
 
-const Location = (props) => {
+const Location = () => {
+
+
   return (
     <Layout>
-      <div>Location</div>
+      <Box>Location</Box>
     </Layout>
   );
 };
