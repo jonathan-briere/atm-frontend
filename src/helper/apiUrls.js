@@ -1,4 +1,4 @@
 export const apiUrls = {
   locations: "/locations",
-  location: (id) => `/locations/${id}`,
+  location: (ip) => `/locations/${ip}`,
 };
