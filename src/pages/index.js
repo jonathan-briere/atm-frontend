@@ -1,15 +1,26 @@
+import { Typography } from "@mui/material";
 import * as React from "react";
-import { fetchGeoLocation, fetchGeoLocations } from "../action/geoAction";
+import { fetchGeoLocations } from "../action/geoAction";
+import { Layout } from "../components/Layout";
 
 const IndexPage = () => {
+  const [locations, setLocations] = React.useState();
+
   React.useEffect(() => {
-    fetchGeoLocations();
+    fetchGeoLocations(setLocations);
   }, []);
 
   return (
-    <div>
-      <h1>ATM Frontend</h1>
-    </div>
+    <Layout>
+      <Typography
+        sx={{ textAlign: "center" }}
+        variant="h2"
+        component="div"
+        gutterBottom
+      >
+        ATM Frontend
+      </Typography>
+    </Layout>
   );
 };
 
