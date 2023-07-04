@@ -7,5 +7,5 @@ export const fetchGeoLocations = (setValue) =>
 
 export const fetchGeoLocation = (ip, setValue) =>
   fetchGeoLocationApi(ip)
-    .then((response) => setValue(response.data))
+    .then((response) => setValue([response.data]))
     .catch((err) => console.error(err));
