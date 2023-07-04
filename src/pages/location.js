@@ -10,6 +10,7 @@ const Location = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    setLocation([]);
     fetchGeoLocation(e.target[0].value, setLocation);
   };
 
